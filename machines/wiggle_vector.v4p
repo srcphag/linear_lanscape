@@ -1,0 +1,181 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
+   <PATCH nodename="E:\vvvv\machines\wiggle_vector.v4p" systemname="wiggle_vector" filename="H:\vvvv\machines\wiggle_vector.v4p">
+   <BOUNDS type="Window" left="10890" top="9270" width="5700" height="6000">
+   </BOUNDS>
+   <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="2040" top="1605" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Scale" slicecount="1" visible="1" values="10">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Prevent from doubles" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Is Integer" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="630" top="3195" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1" slicecount="1" values="3.53430253817848">
+   </PIN>
+   <PIN pinname="Y" visible="1" slicecount="1" values="3.62057439955472">
+   </PIN>
+   <PIN pinname="Z" visible="1" slicecount="1" values="4.8680958321809">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="2040" top="3975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Scale" slicecount="1" visible="1" values="10">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Prevent from doubles" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="2040" top="2820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Scale" slicecount="1" visible="1" values="10">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Prevent from doubles" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="630" top="3600" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="630" top="3600" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="3.88610872795465,6.4105040034712,3.39529418326907">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="vector_out">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="XYZ" dstnodeid="1" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="0">
+   <BOUNDS type="Node" left="945" top="915" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="945" top="915" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="value">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="13" dstpinname="Scale" linkstyle="VHV">
+   <LINKPOINT x="1005" y="1365">
+   </LINKPOINT>
+   <LINKPOINT x="2460" y="1365">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Scale" linkstyle="VHV">
+   <LINKPOINT x="1005" y="1980">
+   </LINKPOINT>
+   <LINKPOINT x="2460" y="1980">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Scale" linkstyle="VHV">
+   <LINKPOINT x="1005" y="2565">
+   </LINKPOINT>
+   <LINKPOINT x="2460" y="2565">
+   </LINKPOINT>
+   </LINK>
+   <PACK Name="dx11" Version="1.0.3">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="2055" top="2025" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="18" dstpinname="Go To Position">
+   </LINK>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="2070" top="3270" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="FilterTime" visible="1" slicecount="1" values="6.57131712138653">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="19" dstpinname="Go To Position">
+   </LINK>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="2040" top="4425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="FilterTime" visible="1" slicecount="1" values="6.57131712138653">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="20" dstpinname="Go To Position">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="21">
+   <BOUNDS type="Node" left="3750" top="810" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3750" top="810" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="time">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="Y Output Value" dstnodeid="18" dstpinname="FilterTime" linkstyle="VHV">
+   <LINKPOINT x="3750" y="1523">
+   </LINKPOINT>
+   <LINKPOINT x="2310" y="1523">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Y Output Value" dstnodeid="19" dstpinname="FilterTime" linkstyle="VHV">
+   <LINKPOINT x="3750" y="2160">
+   </LINKPOINT>
+   <LINKPOINT x="2310" y="2160">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Y Output Value" dstnodeid="20" dstpinname="FilterTime" linkstyle="VHV">
+   <LINKPOINT x="3750" y="2738">
+   </LINKPOINT>
+   <LINKPOINT x="2265" y="2738">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Position Out" dstnodeid="8" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Position Out" dstnodeid="8" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Position Out" dstnodeid="8" dstpinname="Z">
+   </LINK>
+   </PATCH>
